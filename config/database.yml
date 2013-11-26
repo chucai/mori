@@ -14,8 +14,7 @@ development:
   database: mori_development
   pool: 500
   username: root
-  password: 
-  socket: /tmp/mysql.sock
+  password:
   reconnect: false
 
 # Warning: The database defined as "test" will be erased and
@@ -28,7 +27,6 @@ test:
   pool: 500
   username: root
   password:
-  socket: /tmp/mysql.sock
   reconnect: false
 
 production:
@@ -36,7 +34,6 @@ production:
   encoding: utf8
   database: mori_development
   pool: 500
-  username: trace
-  password: trace123
-  socket: /tmp/mysql.sock
+  username: root
+  password:
   reconnect: false
