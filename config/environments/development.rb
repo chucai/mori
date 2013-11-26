@@ -6,6 +6,8 @@ Mori::Application.configure do
   # since you don't have to restart the web server when you make code changes.
   config.cache_classes = false
 
+  config.secret_key_base = "testsssss"
+
   # Do not eager load code on boot.
   config.eager_load = false
 
@@ -27,5 +29,5 @@ Mori::Application.configure do
   # number of complex assets.
   config.assets.debug = true
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
-  
+
 end
