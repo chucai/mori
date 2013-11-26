@@ -5,16 +5,44 @@ OH，又一个小说站点！是的，你说对了。
 
 * 首页
 
-![S1](https://raw.github.com/yuesmart/mori/master/doc/snip/Snip20131125_1.png) 
+![S1](https://raw.github.com/yuesmart/mori/master/doc/snip/Snip20131125_1.png)
 
 * 章节列表
 
-![S2](https://raw.github.com/yuesmart/mori/master/doc/snip/Snip20131125_2.png) 
+![S2](https://raw.github.com/yuesmart/mori/master/doc/snip/Snip20131125_2.png)
 
 * 正文
 
-![S3](https://raw.github.com/yuesmart/mori/master/doc/snip/Snip20131125_3.png) 
+![S3](https://raw.github.com/yuesmart/mori/master/doc/snip/Snip20131125_3.png)
 
+* rake task
+
+抓取ranwen书籍
+```ruby
+rake scraper:ranwen:book
+```
+
+抓取ranwen章节
+```
+rake scraper:ranwen:chapter
+```
+
+抓取ranwen内容
+```
+rake scraper:ranwen:content
+
+
+```
+
+解析ranwen章节上下关系
+```
+rake scraper:ranwen:associate
+```
+
+更新ranwen图书
+```
+rake scraper:ranwen:update
+```
 
 ## Contributing
 
