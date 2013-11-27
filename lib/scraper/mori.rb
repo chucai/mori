@@ -9,6 +9,12 @@ module Mori
   ENCODING = "gb2312"
   MAX_UPDATED_COUNT = 100
 
+  KEY_NAMES = {
+    href_title_url: 'url',
+    href_title_name: 'name',
+    href_author_name: 'author'
+  }
+
   def get url,use_proxy=false,method='get',encoding=nil
     str = ''
     begin
@@ -205,12 +211,5 @@ module Mori
   alias g get
   alias la l
 
-  KEY_NAMES = {
-    href_title_url: 'url',
-    href_title_name: 'name',
-    href_author_name: 'author'
-  }
-  ENABLE_PROXY = false
-  PER_PAGE = 25
-  MAX_UPDATED_COUNT = 100
+
 end
