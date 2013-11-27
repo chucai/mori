@@ -5,6 +5,7 @@ require 'mori'
 
 class Ranwen
   include Mori
+  ENCODING = "gb2312"
   BASE_URL = "http://www.ranwen.net"
   #解析图书
   #
@@ -63,6 +64,7 @@ class Ranwen
     end
   end
 
+  private
   def _parse_chapter_associate chapters
     chapters.each do |c|
       next if c.pre_id.blank?
@@ -193,9 +195,7 @@ class Ranwen
 
         category = Category.find_by_name category_name
         category = Category.create(name: category_name) if category.nil?
-
-        book = Book.find_by_url book_url
-
+        book = Book.find_by url: book_url
         config = {name: book_name,url: book_url,category_id: category.id,author: author,book_status: status,last_chapter_url: last_chapter_url,
           last_chapter_name: last_chapter_name,chapter_url: chapter_url,last_updated_at: Time.now}
 
