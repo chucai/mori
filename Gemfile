@@ -43,6 +43,7 @@ group :test do
   gem "rspec-rails", '2.14.0'
   gem 'factory_girl', '4.3.0'
   gem 'factory_girl_rails', '4.3.0'
+  gem 'database_cleaner', '1.2.0'
 end
 
 gem 'thin'
