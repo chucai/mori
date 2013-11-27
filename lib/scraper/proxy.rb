@@ -5,7 +5,7 @@ class Proxy
   include Mori
 
   #http://www.cnproxy.com/proxy1.html
-  def get_proxy_from_cnproxy  		
+  def get_proxy_from_cnproxy
     v="3";m="4";a="2";l="9";q="0";b="5";i="7";w="6";r="8";c="1"
 
     1.upto(10).each do |i|
@@ -13,20 +13,20 @@ class Proxy
       proxy_list = (doc/"#proxylisttb")
       (proxy_list/"tr > td:nth(0)").each do |td|
         ip  = text td
-        ip  = $1 if ip =~ /(.*?)document/ 
+        ip  = $1 if ip =~ /(.*?)document/
         port = ''
         if td.inner_html =~ /<script type="text\/javascript">document\.write\(":"(.*?)\)<\/script>/
           $1.split('+').each do |pa|
             port << eval(pa)  unless pa.blank?
           end
         end
-          
+
         save_proxy ip,port
 
       end
     end
   end
-    
+
   #http://freeproxylist.org/cn/free-proxy-list.htm
   def get_proxy_from_free_proxy_list
     IO.readlines('./local/proxy.txt').each do |p|
@@ -36,9 +36,9 @@ class Proxy
         save_proxy ip,port
       end
     end
-    
+
   end
-    
+
     #
   def get_proxy_from_proxy360
     doc = Hpricot get("http://www.proxy360.cn/Region/China")
@@ -50,20 +50,20 @@ class Proxy
       save_proxy ip,port
     end
   end
-    
+
     #http://cn-proxy.com/
   def get_proxy_from_cn_proxy
     doc = Hpricot get("http://cn-proxy.com/")
     proxy_list = doc/"table.sortable"
-    (proxy_list/"tbody/tr").each do |tr| 
+    (proxy_list/"tbody/tr").each do |tr|
         tds = tr/"td"
         ip = t tds[0]
         port = t tds[1]
-        
+
         save_proxy ip,port
     end
   end
-    
+
     #
   def get_proxy_from_56ads
     doc = Hpricot get("http://www.56ads.com/proxyip/",false,'get')
@@ -74,9 +74,9 @@ class Proxy
       proxy_doc = Hpricot get(_url,false,'get')
       div = (proxy_doc/"div/p")
     end
-      
+
   end
-    
+
   def save_proxy ip,port
     if port.to_i >0
       ip =  trim ip
@@ -84,13 +84,14 @@ class Proxy
       p "#{ip}:#{port}"
       ps = ProxyServer.find_by ip: ip,port: port
       if ps.nil?
-        ProxyServer.create ip: ip,port: port
+        ProxyServer.create ip: ip,port: port, active: 1
       else
-        ps.update_attributes count: ps.count+1
+        count = ps.count || 0
+        ps.update_attributes count: (count + 1), active: 1
       end
     end
   end
-    
+
   def update_proxy
     get_proxy_from_cnproxy
     get_proxy_from_free_proxy_list

@@ -1,0 +1,149 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+Application	./config/application.rb	/^  class Application < Rails::Application$/;"	c	class:Mori
+ApplicationController	./app/controllers/application_controller.rb	/^class ApplicationController < ActionController::Base$/;"	c
+ApplicationHelper	./app/helpers/application_helper.rb	/^module ApplicationHelper$/;"	m
+Book	./app/models/book.rb	/^class Book < ActiveRecord::Base$/;"	c
+BooksController	./app/controllers/books_controller.rb	/^class BooksController < ApplicationController$/;"	c
+CategoriesController	./app/controllers/categories_controller.rb	/^class CategoriesController < ApplicationController$/;"	c
+Category	./app/models/category.rb	/^class Category < ActiveRecord::Base$/;"	c
+Chapter	./app/models/chapter.rb	/^class Chapter < ActiveRecord::Base$/;"	c
+ChapterId	./app/models/chapter_id.rb	/^class ChapterId < ActiveRecord::Base$/;"	c
+ChaptersController	./app/controllers/chapters_controller.rb	/^class ChaptersController < ApplicationController$/;"	c
+ClassMethods	./app/models/concerns/social_media_authentication.rb	/^  module ClassMethods$/;"	m	class:SocialMediaAuthentication
+ClickLog	./app/models/click_log.rb	/^class ClickLog < ActiveRecord::Base$/;"	c
+Content	./app/models/content.rb	/^class Content < ActiveRecord::Base$/;"	c
+CreateBooks	./db/migrate/20130912153814_create_books.rb	/^class CreateBooks < ActiveRecord::Migration$/;"	c
+CreateCategories	./db/migrate/20130912154049_create_categories.rb	/^class CreateCategories < ActiveRecord::Migration$/;"	c
+CreateChapterIds	./db/migrate/20131007170821_create_chapter_ids.rb	/^class CreateChapterIds < ActiveRecord::Migration$/;"	c
+CreateChapters	./db/migrate/20130912163357_create_chapters.rb	/^class CreateChapters < ActiveRecord::Migration$/;"	c
+CreateClickLogs	./db/migrate/20130914084958_create_click_logs.rb	/^class CreateClickLogs < ActiveRecord::Migration$/;"	c
+CreateContents	./db/migrate/20130912163612_create_contents.rb	/^class CreateContents < ActiveRecord::Migration$/;"	c
+CreateErrorUrls	./db/migrate/20130912154918_create_error_urls.rb	/^class CreateErrorUrls < ActiveRecord::Migration$/;"	c
+CreateFavourites	./db/migrate/20130914123005_create_favourites.rb	/^class CreateFavourites < ActiveRecord::Migration$/;"	c
+CreateProxyServers	./db/migrate/20130912154805_create_proxy_servers.rb	/^class CreateProxyServers < ActiveRecord::Migration$/;"	c
+CreateReadBookHistories	./db/migrate/20130914090532_create_read_book_histories.rb	/^class CreateReadBookHistories < ActiveRecord::Migration$/;"	c
+CreateReadChapterHistories	./db/migrate/20130914090602_create_read_chapter_histories.rb	/^class CreateReadChapterHistories < ActiveRecord::Migration$/;"	c
+CreateSearchLogs	./db/migrate/20130914103003_create_search_logs.rb	/^class CreateSearchLogs < ActiveRecord::Migration$/;"	c
+CreateSearchWords	./db/migrate/20130914103023_create_search_words.rb	/^class CreateSearchWords < ActiveRecord::Migration$/;"	c
+CreateVolumes	./db/migrate/20130912163429_create_volumes.rb	/^class CreateVolumes < ActiveRecord::Migration$/;"	c
+DeviseCreateUsers	./db/migrate/20130915120550_devise_create_users.rb	/^class DeviseCreateUsers < ActiveRecord::Migration$/;"	c
+ErrorUrl	./app/models/error_url.rb	/^class ErrorUrl < ActiveRecord::Base$/;"	c
+Favourite	./app/models/favourite.rb	/^class Favourite < ActiveRecord::Base$/;"	c
+FavouritesController	./app/controllers/favourites_controller.rb	/^class FavouritesController < ApplicationController$/;"	c
+MainController	./app/controllers/main_controller.rb	/^class MainController < ApplicationController$/;"	c
+Mori	./config/application.rb	/^module Mori$/;"	m
+Mori	./lib/scraper/mori.rb	/^module Mori $/;"	m
+Proxy	./lib/scraper/proxy.rb	/^class Proxy$/;"	c
+ProxyServer	./app/models/proxy_server.rb	/^class ProxyServer < ActiveRecord::Base$/;"	c
+Ranwen	./lib/scraper/ranwen.rb	/^class Ranwen$/;"	c
+ReadBookHistory	./app/models/read_book_history.rb	/^class ReadBookHistory < ActiveRecord::Base$/;"	c
+ReadChapterHistory	./app/models/read_chapter_history.rb	/^class ReadChapterHistory < ActiveRecord::Base$/;"	c
+SearchLog	./app/models/search_log.rb	/^class SearchLog < ActiveRecord::Base$/;"	c
+SearchWord	./app/models/search_word.rb	/^class SearchWord < ActiveRecord::Base$/;"	c
+SocialMediaAuthentication	./app/models/concerns/social_media_authentication.rb	/^module SocialMediaAuthentication$/;"	m
+User	./app/models/user.rb	/^class User < ActiveRecord::Base$/;"	c
+Users	./app/controllers/users/omniauth_callbacks_controller.rb	/^class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController$/;"	c
+Users	./app/controllers/users/registrations_controller.rb	/^class Users::RegistrationsController < Devise::RegistrationsController$/;"	c
+Volume	./app/models/volume.rb	/^class Volume < ActiveRecord::Base$/;"	c
+_parse_book	./lib/scraper/ranwen.rb	/^  def _parse_book doc$/;"	f
+_parse_chapter	./lib/scraper/ranwen.rb	/^  def _parse_chapter book$/;"	f	class:Ranwen
+_parse_chapter_associate	./lib/scraper/ranwen.rb	/^  def _parse_chapter_associate chapters$/;"	f	class:Ranwen
+_parse_content	./lib/scraper/ranwen.rb	/^  def _parse_content chapters$/;"	f	class:Ranwen
+_parse_update	./lib/scraper/ranwen.rb	/^  def _parse_update page=1$/;"	f
+a	./lib/scraper/mori.rb	/^  def a node, key$/;"	f	class:Mori
+active?	./app/helpers/application_helper.rb	/^  def active? s1,s2$/;"	f	class:ApplicationHelper
+active_css	./app/helpers/application_helper.rb	/^  def active_css *m$/;"	f	class:ApplicationHelper
+active_css2	./app/helpers/application_helper.rb	/^  def active_css2 *m$/;"	f	class:ApplicationHelper
+active_css_for_action	./app/helpers/application_helper.rb	/^  def active_css_for_action action$/;"	f	class:ApplicationHelper
+add	./app/models/favourite.rb	/^    def add config$/;"	f	class:Favourite
+add_to_history	./app/models/read_chapter_history.rb	/^    def add_to_history config$/;"	f	class:ReadChapterHistory
+book_params	./app/controllers/books_controller.rb	/^    def book_params$/;"	f	class:BooksController
+category_params	./app/controllers/categories_controller.rb	/^    def category_params$/;"	f	class:CategoriesController
+change	./db/migrate/20130912153814_create_books.rb	/^  def change$/;"	f	class:CreateBooks
+change	./db/migrate/20130912154049_create_categories.rb	/^  def change$/;"	f	class:CreateCategories
+change	./db/migrate/20130912154805_create_proxy_servers.rb	/^  def change$/;"	f	class:CreateProxyServers
+change	./db/migrate/20130912154918_create_error_urls.rb	/^  def change$/;"	f	class:CreateErrorUrls
+change	./db/migrate/20130912163357_create_chapters.rb	/^  def change$/;"	f	class:CreateChapters
+change	./db/migrate/20130912163429_create_volumes.rb	/^  def change$/;"	f	class:CreateVolumes
+change	./db/migrate/20130912163612_create_contents.rb	/^  def change$/;"	f	class:CreateContents
+change	./db/migrate/20130914084958_create_click_logs.rb	/^  def change$/;"	f	class:CreateClickLogs
+change	./db/migrate/20130914090532_create_read_book_histories.rb	/^  def change$/;"	f	class:CreateReadBookHistories
+change	./db/migrate/20130914090602_create_read_chapter_histories.rb	/^  def change$/;"	f	class:CreateReadChapterHistories
+change	./db/migrate/20130914103003_create_search_logs.rb	/^  def change$/;"	f	class:CreateSearchLogs
+change	./db/migrate/20130914103023_create_search_words.rb	/^  def change$/;"	f	class:CreateSearchWords
+change	./db/migrate/20130914123005_create_favourites.rb	/^  def change$/;"	f	class:CreateFavourites
+change	./db/migrate/20130915120550_devise_create_users.rb	/^  def change$/;"	f	class:DeviseCreateUsers
+change	./db/migrate/20131007170821_create_chapter_ids.rb	/^  def change$/;"	f	class:CreateChapterIds
+chapter_params	./app/controllers/chapters_controller.rb	/^    def chapter_params$/;"	f	class:ChaptersController
+check_mysql_connection	./lib/scraper/mori.rb	/^  def check_mysql_connection$/;"	f	class:Mori
+click	./app/models/click_log.rb	/^    def click config$/;"	f	class:ClickLog
+content_count	./lib/scraper/mori.rb	/^  def content_count html$/;"	f	class:Mori
+create	./app/controllers/favourites_controller.rb	/^  def create$/;"	f	class:FavouritesController
+current_controller_name	./app/models/click_log.rb	/^    def current_controller_name config$/;"	f	class:ClickLog
+destroy	./app/controllers/favourites_controller.rb	/^  def destroy$/;"	f	class:FavouritesController
+edit	./app/controllers/favourites_controller.rb	/^  def edit$/;"	f	class:FavouritesController
+error	./app/helpers/application_helper.rb	/^  def error$/;"	f	class:ApplicationHelper
+facebook	./app/controllers/users/omniauth_callbacks_controller.rb	/^  def facebook$/;"	f	class:Users
+favourite_params	./app/controllers/favourites_controller.rb	/^    def favourite_params$/;"	f	class:FavouritesController
+find_for_database_authentication	./app/models/user.rb	/^  def self.find_for_database_authentication(conditions)$/;"	F	class:User
+find_for_facebook_oauth	./app/models/concerns/social_media_authentication.rb	/^    def find_for_facebook_oauth(auth, signed_in_resource=nil)$/;"	f	class:SocialMediaAuthentication.ClassMethods
+find_for_github_oauth	./app/models/concerns/social_media_authentication.rb	/^    def find_for_github_oauth(auth, signed_in_resource=nil)$/;"	f	class:SocialMediaAuthentication.ClassMethods
+find_for_google_oauth2	./app/models/concerns/social_media_authentication.rb	/^    def find_for_google_oauth2(access_token, signed_in_resource=nil)$/;"	f	class:SocialMediaAuthentication.ClassMethods
+find_for_oauth	./app/models/concerns/social_media_authentication.rb	/^    def find_for_oauth(auth, signed_in_resource=nil)$/;"	f	class:SocialMediaAuthentication.ClassMethods
+find_for_twitter_oauth	./app/models/concerns/social_media_authentication.rb	/^    def find_for_twitter_oauth(auth, signed_in_resource=nil)$/;"	f	class:SocialMediaAuthentication.ClassMethods
+get	./lib/scraper/mori.rb	/^  def get url,use_proxy=false,method='get',encoding=nil$/;"	f	class:Mori
+get_proxy_from_56ads	./lib/scraper/proxy.rb	/^  def get_proxy_from_56ads$/;"	f
+get_proxy_from_cn_proxy	./lib/scraper/proxy.rb	/^  def get_proxy_from_cn_proxy$/;"	f
+get_proxy_from_cnproxy	./lib/scraper/proxy.rb	/^  def get_proxy_from_cnproxy  		$/;"	f	class:Proxy
+get_proxy_from_free_proxy_list	./lib/scraper/proxy.rb	/^  def get_proxy_from_free_proxy_list$/;"	f
+get_proxy_from_proxy360	./lib/scraper/proxy.rb	/^  def get_proxy_from_proxy360$/;"	f
+github	./app/controllers/users/omniauth_callbacks_controller.rb	/^  def github$/;"	f	class:Users
+google_oauth2	./app/controllers/users/omniauth_callbacks_controller.rb	/^	def google_oauth2    $/;"	f	class:Users
+h	./lib/scraper/mori.rb	/^  def h url,encoding=nil$/;"	f	class:Mori
+histories	./app/models/read_book_history.rb	/^    def histories config$/;"	f	class:ReadBookHistory
+index	./app/controllers/books_controller.rb	/^  def index$/;"	f	class:BooksController
+index	./app/controllers/favourites_controller.rb	/^  def index$/;"	f	class:FavouritesController
+index	./app/controllers/main_controller.rb	/^  def index$/;"	f	class:MainController
+init_params	./app/controllers/application_controller.rb	/^  def init_params$/;"	f	class:ApplicationController
+l	./lib/scraper/mori.rb	/^  def l node, inner_text=true$/;"	f	class:Mori
+lh	./lib/scraper/mori.rb	/^  def lh node$/;"	f	class:Mori
+log	./lib/scraper/mori.rb	/^  def log *msg$/;"	f
+lt	./lib/scraper/mori.rb	/^  def lt node$/;"	f	class:Mori
+new	./app/controllers/favourites_controller.rb	/^  def new$/;"	f	class:FavouritesController
+new_with_session	./app/models/concerns/social_media_authentication.rb	/^    def new_with_session(params, session)$/;"	f	class:SocialMediaAuthentication.ClassMethods
+next	./app/models/chapter.rb	/^  def next$/;"	f	class:Chapter
+parse_book	./lib/scraper/ranwen.rb	/^  def parse_book page=1$/;"	f	class:Ranwen
+parse_chapter	./lib/scraper/ranwen.rb	/^  def parse_chapter$/;"	f	class:Ranwen
+parse_chapter_associate	./lib/scraper/ranwen.rb	/^  def parse_chapter_associate$/;"	f	class:Ranwen
+parse_content	./lib/scraper/ranwen.rb	/^  def parse_content chapters = nil,_page=nil,_max_page=nil$/;"	f	class:Ranwen
+parse_update	./lib/scraper/ranwen.rb	/^  def parse_update$/;"	f	class:Ranwen
+pre	./app/models/chapter.rb	/^  def pre$/;"	f	class:Chapter
+reading_chapters	./app/models/read_book_history.rb	/^    def reading_chapters config$/;"	f	class:ReadBookHistory
+reset_mysql_connection	./lib/scraper/mori.rb	/^  def reset_mysql_connection$/;"	f	class:Mori
+reset_session	./app/controllers/users/omniauth_callbacks_controller.rb	/^  def reset_session$/;"	f	class:Users
+save_chapter_id	./app/models/chapter.rb	/^  def save_chapter_id$/;"	f	class:Chapter
+save_error	./lib/scraper/mori.rb	/^  def save_error url,content$/;"	f
+save_proxy	./lib/scraper/proxy.rb	/^  def save_proxy ip,port$/;"	f
+search	./app/models/book.rb	/^    def search config$/;"	f	class:Book
+set_book	./app/controllers/books_controller.rb	/^    def set_book$/;"	f	class:BooksController
+set_category	./app/controllers/categories_controller.rb	/^    def set_category$/;"	f	class:CategoriesController
+set_chapter	./app/controllers/chapters_controller.rb	/^    def set_chapter$/;"	f	class:ChaptersController
+set_favourite	./app/controllers/favourites_controller.rb	/^    def set_favourite$/;"	f	class:FavouritesController
+show	./app/controllers/books_controller.rb	/^  def show$/;"	f	class:BooksController
+show	./app/controllers/categories_controller.rb	/^  def show$/;"	f	class:CategoriesController
+show	./app/controllers/chapters_controller.rb	/^  def show$/;"	f	class:ChaptersController
+show	./app/controllers/favourites_controller.rb	/^  def show$/;"	f	class:FavouritesController
+t	./lib/scraper/mori.rb	/^  def t node, first=true$/;"	f	class:Mori
+time_to_str	./lib/scraper/mori.rb	/^  def time_to_str time=Time.now, format="%Y-%m-%d %H:%M:%S"$/;"	f
+trim	./app/helpers/application_helper.rb	/^  def trim c$/;"	f	class:ApplicationHelper
+trim	./lib/scraper/mori.rb	/^  def trim obj$/;"	f	class:Mori
+trim_quote_and_numer	./lib/scraper/mori.rb	/^  def trim_quote_and_numer v$/;"	f
+twitter	./app/controllers/users/omniauth_callbacks_controller.rb	/^  def twitter$/;"	f	class:Users
+update	./app/controllers/favourites_controller.rb	/^  def update$/;"	f	class:FavouritesController
+update_proxy	./lib/scraper/proxy.rb	/^  def update_proxy$/;"	f
+update_sanitized_params	./app/controllers/users/registrations_controller.rb	/^    def update_sanitized_params$/;"	f	class:Users

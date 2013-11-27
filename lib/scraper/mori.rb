@@ -3,8 +3,8 @@ require 'open-uri'
 require 'uri'
 require "yaml"
 
-module Mori 
-  ENABLE_PROXY = false
+module Mori
+  ENABLE_PROXY = true
   PER_PAGE = 25
   ENCODING = "gb2312"
   MAX_UPDATED_COUNT = 100
@@ -13,8 +13,9 @@ module Mori
     str = ''
     begin
       uri = URI url
+      # binding.pry
       @proxy_server = ProxyServer.where(active: true).order('RAND()').take if use_proxy || ENABLE_PROXY
-    
+
       if @proxy_server.nil?
         http = Net::HTTP.new(uri.host, uri.port)
       else
@@ -27,9 +28,9 @@ module Mori
 
       http.open_timeout = 10
       http.read_timeout = 10
-      
+
       if method == 'post'
-        response = http.post(uri.path, nil, 
+        response = http.post(uri.path, nil,
           "User-Agent" => "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.57 Safari/537.36",
           # "Accept-Encoding" => "identity",
           # "Referer" => url,
@@ -42,7 +43,7 @@ module Mori
       else
         response = http.get("#{uri.path}?#{uri.query}")
       end
-      
+
       case response
         when Net::HTTPSuccess then
           str = response.body
@@ -55,21 +56,21 @@ module Mori
       end
     rescue => e
       log "error:#{e.inspect}"
-      save_error url,e.inspect    
+      save_error url,e.inspect
       return get(url,true)
     end
   end
-  
+
   def check_mysql_connection
     # kids = Book.connection.execute "select count(id) count from information_schema.processlist where Command='Sleep' and db='mori_development' and Time>10"
-    # 
+    #
     # count = kids.first.first
     # log '*'*100
     # log "current connection:#{count}"
     # log '*'*100
     reset_mysql_connection #if count.to_i > 50
   end
-  
+
   def reset_mysql_connection
     kids = Book.connection.execute "select concat('KILL ',id) kid from information_schema.processlist where  Command='Sleep' and db='mori_development' and Time>500"
     kids.each do |k|
@@ -80,7 +81,7 @@ module Mori
         log "killed error:#{e.inspect}"
       end
     end
-    
+
     begin
       ActiveRecord::Base.clear_active_connections!
     rescue => e
@@ -88,7 +89,7 @@ module Mori
     end
     # sleep 1
   end
-    
+
   def content_count html
     trim(html).length rescue 0
   end
@@ -116,7 +117,7 @@ module Mori
     else
       _text = node.inner_text
     end
-    
+
     trim _text
   end
 
@@ -166,7 +167,7 @@ module Mori
     log "       #{time},#{format}"
     time
   end
-  
+
   def trim_quote_and_numer v
     if v =~ /(.*)\(\d+\)/
       $1
@@ -175,14 +176,14 @@ module Mori
       v
     end
   end
-  
+
   def save_error url,content
     log "http error:#{url},#{content}"
     error = ErrorUrl.find_by url:url
     ErrorUrl.create url: url, status: content if error.nil?
     @proxy_server.update_attributes active: false,status: 'Error' if ENABLE_PROXY
   end
-  
+
   def log *msg
     file, line, others = caller.first.split(":")
     puts "#{time_to_str Time.now}\t#{file.split("/").last}:#{line}\t#{msg.join("\t")}"

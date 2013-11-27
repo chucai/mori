@@ -32,6 +32,13 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+group :development, :test do
+  gem "pry"
+  gem "pry-rails"
+  gem 'pry-remote'
+  gem 'pry-nav'
+end
+
 gem 'thin'
 gem 'hpricot'
 gem 'kaminari'
