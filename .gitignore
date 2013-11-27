@@ -29,3 +29,5 @@ capybara-*.html
 /db/schema.rb
 /Gemfile.lock
 /config/database.yml
+.tags
+.gemtags
